@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+        <link rel="stylesheet" href="css/index.css">
         <title>Dolce Cakes</title>
     </head>
     <body>
@@ -12,15 +15,15 @@
                     <a class="adress-tel" href="tel:12345678900">+38 (099) 9999999</a>
                 </div>
                 <div class="social">
-                    <a href="#" class="social-link">Facebook</a>
-                    <a href="#" class="social-link">Instagram</a>
-                    <a href="#" class="social-link">Youtube</a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
                 </div>
                 <div class="language__item">
-                    <a href="#" class="language">Language</a>
+                <button>Language <i class="fa fa-language"></i></button>
                 </div>
                 <div class="logo">
-                    <img src="img/dolce_natura.png" alt="logo">
+                    <a href="index.html"><img src="img/dolce_natura.png" alt="logo">
                 </div>
                 <div class="menu-items">
                     <a href="about_us.html">About us </a>
@@ -31,6 +34,27 @@
                 <h1>Dolce Cakes</h1>
                 <div class="special offer">
                     <div class="text__special_offer">
+                    <div class="promotion__timer">
+                <div class="title">Remaining until the end of the promotion:</div>
+                <div class="timer">
+                    <div class="timer__block">
+                        <span id="days">12</span>
+                        days
+                    </div>
+                    <div class="timer__block">
+                        <span id="hours">20</span>
+                        hours
+                    </div>
+                    <div class="timer__block">
+                        <span id="minutes">56</span>
+                        minutes
+                    </div>
+                    <div class="timer__block">
+                        <span id="seconds">20</span>
+                        seconds
+                    </div>
+                </div>
+            </div>
                         <p>Promotion: Hurry up to place an order for the amount of $ 100 or more of our delicious products and get a 10% discount and free delivery around the city.</p>
                     </div>
                     <div class="timer__specia_offer"></div>
@@ -47,13 +71,31 @@
             <section>
                 <h2>Choose your sweet</h2>
                 <div class="products-list">
-                    <div class="products-list-cakes"></div>
-                    <div class="products-list-cookies"></div>
+                    <div class="products-list-cakes">
+                     <img src="img/sweets/cakes/cake_lemon.jpg" alt="Cake">
+                        <img src="img/sweets/cakes/cake_oreo.jpg" alt="Cake">
+                        <img src="img/sweets/cakes/cake_red.jpg" alt="Cake">
+                        <img src="img/sweets/cakes/cake_reinbow.jpg" alt="Cake">
+                        <img src="img/sweets/cakes/cake_semio.jpg" alt="Cake">
+                        <img src="img/sweets/cakes/cake_sweet.jpg" alt="Cake">
+                        <img src="img/sweets/cakes/cake_vanila.jpg" alt="Cake">
+                        <img src="img/sweets/cakes/cake_vanilin.jpg" alt="Cake">
+                    </div>
+                    <div class="products-list-cookies">
+                      <img src="img/sweets/cookies/cookies_baje.jpg" alt="cookies">
+                      <img src="img/sweets/cookies/cookies_brown.jpg" alt="cookies">
+                      <img src="img/sweets/cookies/cookies_buono.jpg" alt="cookies">
+                      <img src="img/sweets/cookies/cookies_hell.jpg" alt="cookies">
+                        <img src="img/sweets/cookies/cookies_hellowen.jpg" alt="cookies">
+                        <img src="img/sweets/cookies/cookies_marble.jpg" alt="cookies">
+                        <img src="img/sweets/cookies/cookies_.sweet.jpg" alt="cookies">
+                        <img src="img/sweets/cookies/cookies_taste.jpg" alt="cookies">
+                                            </div>
                     <div class="products-list-cupcakes"></div>
                     <article class="product-card">
-                        <img src="img/sweets/cakes/cake1.jpg" alt="Cake">
-                        <h3>name</h3>
-                        <h3>price</h3>
+                       
+                        <h3>Cake "name"</h3>
+                        <h3>$.../kg.</h3>
                         <div class="product_buttom">
                             <button class="order_product">Order</button>
                         </div>
@@ -72,13 +114,14 @@
                 <h2>Bright And Tasty Candy Bar 
                 For Children's Parties</h2>
                 <p>Surprise children with a chic, beautifully decorated sweet buffet where the most delicious desserts are offered: mini cheesecakes, cakes, cupcakes, muffins, strudels and more. You can select your children’s favorite sweets from our catalogue and order custom decoration.</p>
-                <img src="img/candy_bar/128.jpg" alt="Candy bar">
-                <img src="img/candey_bar/" alt="Candy bar">
-                <img src="img/candey_bar/" alt="Candy bar">
-                <img src="img/candey_bar/" alt="Candy bar">
-                <img src="img/candey_bar/" alt="Candy bar">
-                <img src="img/candey_bar/" alt="Candy bar">
+                <img src="img/candy_bar/candy_bar_kids.jpg" alt="Candy bar">
+                <img src="img/candy_bar/candy_bar_bday.jpg" alt="Candy bar">
+                <img src="img/candy_bar/candy_bar_wedding.jpg" alt="Candy bar">
+                <img src="img/candy_bar/candy_bar.jpg" alt="Candy bar">
+                <img src="img/candy_bar/candy_bar_rose.jpg" alt="Candy bar">
+                <img src="img/candy_bar/candy_bar_kid.jpg" alt="Candy bar">
             </section>
+
             <section class="special__offer">
                 <h2>Special Offer</h2>
                 <article class="product-card2">
@@ -90,13 +133,15 @@
             </section>
             <section class="wedding_cake">
                 <h2>Wedding Cake Tasting!</h2>
-                <img src="img/weddings_cake/1.jpg" alt="wedding cake">
-                <img src="img/weddings_cake/.jpg" alt="wedding cake">
-                <img src="img/weddings_cake/.jpg" alt="wedding cake">
-                <img src="img/weddings_cake/.jpg" alt="wedding cake">
-                <img src="img/weddings_cake/.jpg" alt="wedding cake">
-                <img src="img/weddings_cake/.jpg" alt="wedding cake">
-                <img src="img/weddings_cake/.jpg" alt="wedding cake">
+                <img src="img/weddings_cake/weddingcake_buono.jpg" alt="wedding cake">
+                <img src="img/weddings_cake/weddingcake_flower.jpg" alt="wedding cake">
+                <img src="img/weddings_cake/weddingcake_lemon.jpg" alt="wedding cake">
+                <img src="img/weddings_cake/weddingcake_love.jpg" alt="wedding cake">
+                <img src="img/weddings_cake/weddingcake_NewOrlean.jpg" alt="wedding cake">
+                <img src="img/weddings_cake/weddingcake_sweet.jpg" alt="wedding cake">
+                <img src="img/weddings_cake/weddingcake_taste.jpg" alt="wedding cake">
+                <img src="img/weddings_cake/weddingcake_toppers.jpg" alt="wedding cake">
+                <img src="img/weddings_cake/weddingcake_vanila.jpg" alt="wedding cake">
                
                 <p>Our handmade cakes are sweet works of art! Order a FREE tasting and choose fillers and fragrances for a wonderful wedding day!</p>
                 <button>Make an appointment</button>
@@ -105,7 +150,7 @@
         <footer>
             <div id="order">
                 <h2>Order Fresh Handcrafted Sweets At Dolce Cakes!</h2>
-                <p>Fill out the fields below, and we will contact you soon to take your order!</p>
+                <h3>Fill out the fields below, and we will contact you soon to take your order!</h3>
                 <label>
                     Name:
                     <input type="text" placeholder="name" required>
@@ -116,6 +161,24 @@
                 </label>
                 <input type="submit">
             </div>
+            <nav class="down_nav">
+                <div class="logo">
+                    <a href="index.html"><img src="img/dolce_natura.png" alt="logo">
+                </div>
+            
+                <div class="menu-items">
+                    <a href="about_us.html">About us </a>
+                    <a href="contacts.html ">Contacts </a>
+                </div>
+                <div class="social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                </div>
+                <div class="coppy_right">
+                <h3>© Created by StasDeveloper  All rights Reserved</h3>
+                <div>
+            </nav>
         </footer>
     </body>
 </html>
