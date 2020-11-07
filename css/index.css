@@ -7,3 +7,7 @@
   border-radius: 50%;
    color: red;
 }
+img{
+     width: 200; /* Ширина области */
+    height: 350px; /* Высота области */
+}
