@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
 .fa {
   padding: 5px;
   font-size: 20px;
@@ -8,6 +9,14 @@
    color: red;
 }
 img{
-     width: 200; /* Ширина области */
+    max-width: 200; /* Ширина области */
     height: 350px; /* Высота области */
+}
+#logup{
+    max-width: 50;
+}
+h1{
+    font-family: 'Merienda One', cursive;
+    font-size: 100%;
+    color: #454043;
 }
