@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Merienda+One&family=Source+Sans+Pro&display=swap');
+:root{
+    font-family: 'Lato', sans-serif;
+}
 .fa {
   padding: 5px;
   font-size: 20px;
@@ -15,8 +18,15 @@ img{
 #logup{
     max-width: 50;
 }
-h1{
+h1, h2, h3, h4{
     font-family: 'Merienda One', cursive;
     font-size: 100%;
     color: #454043;
+}
+p, a{
+    color: rgb(108,100,110);
+    font-size: 20px;
+}
+button{
+   font-family: 'Source Sans Pro', sans-serif;
 }
