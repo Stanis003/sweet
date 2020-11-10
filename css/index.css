@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Merienda+One&family=Source+Sans+Pro&display=swap');
 :root{
     font-family: 'Lato', sans-serif;
+    --main-color: rgb(108,100,110);
+}
+body{
+    max-width: 980;
+    margin: auto;
 }
 .fa {
   padding: 5px;
@@ -11,16 +16,53 @@
   border-radius: 50%;
    color: red;
 }
-img{
-    max-width: 200; /* Ширина области */
-    height: 350px; /* Высота области */
+header nav .resp{
+    height: auto;
+    max-width: 100px;
 }
+header nav .menu-items a{
+    display: block;
+    color: var(--main-color);
+    border:1px solid transparent;
+    padding: 3px;
+    text-transform: uppercase;
+}
+@media(min-width:760px){
+    header nav{
+        display: flex;
+    }
+    header nav .menu-items{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex: 1;
+    }
+}
+.menu-items>a:hover{
+    border-color: 1px solid var(--main-color);
+}
+
+header .banner{
+    background: url("../img/details/konditer.jpg");
+    min-height: 500px;
+    background-size:cover;
+    background-position: left;
+}
+h1{
+    display: flex;
+    font-size: 4.5rem;
+}
+
+
 #logup{
     max-width: 50;
 }
+.logo{
+
+}
 h1, h2, h3, h4{
     font-family: 'Merienda One', cursive;
-    font-size: 100%;
+    
     color: #454043;
 }
 p, a{
