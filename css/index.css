@@ -16,10 +16,13 @@ body{
   border-radius: 50%;
    color: red;
 }
-header nav .resp{
-    height: auto;
-    max-width: 100px;
+header nav .first_row{
+    display:flex;
+  
+    justify-content: space-between;
+   
 }
+
 header nav .menu-items a{
     display: block;
     color: var(--main-color);
@@ -31,14 +34,14 @@ header nav .menu-items a{
     header nav{
         display: flex;
     }
-    header nav .menu-items{
+    header nav .menu-items {
         display: flex;
         align-items: flex-start;
-        justify-content: space-around;
+        justify-content: flex-end;
         flex: 1;
     }
 }
-.menu-items>a:hover{
+.menu-items a:hover{
     border-color: 1px solid var(--main-color);
 }
 
@@ -46,7 +49,7 @@ header .banner{
     background: url("../img/details/konditer.jpg");
     min-height: 500px;
     background-size:cover;
-    background-position: left;
+    background-position: center;
 }
 h1{
     display: flex;
@@ -55,10 +58,10 @@ h1{
 
 
 #logup{
-    max-width: 50;
+    max-width: 50px;
 }
 .logo{
-
+width: 50px;
 }
 h1, h2, h3, h4{
     font-family: 'Merienda One', cursive;
