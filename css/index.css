@@ -4,7 +4,7 @@
     --main-color: rgb(108,100,110);
 }
 body{
-    max-width: 980;
+    max-width: 980px;
     margin: auto;
 }
 .fa {
@@ -31,15 +31,20 @@ header nav .menu-items a{
     text-transform: uppercase;
 }
 @media(min-width:760px){
-    header nav{
-        display: flex;
-    }
+   
     header nav .menu-items {
         display: flex;
         align-items: flex-start;
-        justify-content: flex-end;
+        justify-content: space-around;
         flex: 1;
     }
+}
+@media(min-width:540px){
+.products-list-cakes{
+display: grid;
+grid-template-columns: 1fr, 1fr, 1fr;
+grid-gap: 5px;
+}
 }
 .menu-items a:hover{
     border-color: 1px solid var(--main-color);
@@ -61,12 +66,12 @@ h1{
     max-width: 50px;
 }
 .logo{
-width: 50px;
+width: 70px;
 }
 h1, h2, h3, h4{
     font-family: 'Merienda One', cursive;
-    
     color: #454043;
+    text-align: center;
 }
 p, a{
     color: rgb(108,100,110);
@@ -74,4 +79,13 @@ p, a{
 }
 button{
    font-family: 'Source Sans Pro', sans-serif;
+}
+ img
+{
+    display: block;
+    width: 100%;
+}
+.product_buttom{
+    display: flex;
+justify-content: center;
 }
