@@ -2,6 +2,7 @@
 :root{
     font-family: 'Lato', sans-serif;
     --main-color: rgb(108,100,110);
+    scroll-behavior: smooth;
 }
 body{
     max-width: 980px;
@@ -40,10 +41,20 @@ header nav .menu-items a{
     }
 }
 @media(min-width:540px){
-.products-list-cakes{
+.products-list-cakes, .products-list-cookies,
+.products-list-cupcakes, .candy_bar{
 display: grid;
-grid-template-columns: 1fr, 1fr, 1fr;
+grid-template-columns: 1fr 1fr;
 grid-gap: 5px;
+}
+}
+@media(min-width:800px){
+.products-list-cakes, .products-list-cookies,
+.products-list-cupcakes, .special_offer{
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid: 5px;
+
 }
 }
 .menu-items a:hover{
