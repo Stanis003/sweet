@@ -33,13 +33,14 @@
             <div class="banner">
                  <h1>Dolce Cakes</h1>
                 <div class="special_offer">
-                     <p>Promotion: Hurry up to place an order for the amount of $ 100 or more of our delicious products and get a 10% discount and free delivery around the city.</p>
+                    
+                     <p class="promotion">Promotion: Hurry up to place an order for the amount of $ 100 or more of our delicious products and get a 10% discount and free delivery around the city.</p>
                      <div class="banner-location">
                     <p>Confectionery to order in Chernivtsi</p>
                     </div>
-                    
+                   
                 </div>
-                 <button class="button headerbutton btn btn-danger">Our story</button>
+                 <button class=" btn btn-danger">Our story</button> 
             </div>
         
         </header>
@@ -220,13 +221,13 @@
             <img src="img/special_offer/engelsaugen.jpg" alt="Engelsaugen">
            <h3>Engelsaugen</h3>
            <h3>$25/kg</h3>
-           <p>Angel eyes or also called hussar donuts are small hazelnut shortcrust pastry dishes with a fruity jam filling. They are one of the classic cookies and must therefore not be missing during the Christmas season.</p>
+           <p>Angel eyes or also called hussar donuts are small hazelnut  with a fruity jam filling.</p>
           </div>    
           <div class="card offer_cupcake border" >
             <img src="img/special_offer/spice.jpg" alt="Spice">
             <h3>Spice</h3>
                     <h3>$30/kg</h3>
-                    <p>Spice cupcakes remind me of fall! Apples, cinnamon, and pumpkin are warm cozy flavors. Cream cheese frosting is great on any of these - for an easy garnish dust with some cinnamon after frosting.</p>
+                    <p>Spice cupcakes remind me of fall! Apples, cinnamon, and pumpkin are warm cozy flavors.</p>
           </div>    
         </div>         
     </section>
@@ -305,16 +306,23 @@
                 <h2>Order Fresh Handcrafted Sweets At Dolce Cakes!</h2>
                 <p>Fill out the fields below, and we will contact you soon to take your order!</p>
                 <form action="ADRESS" method="POST">
-                <label>
-                    Name:
-                    <input type="text" placeholder="name" required="">
-                </label>
-                <label>
+                    <div class="form-group">
+        <label for="user-name">                
+         Name:
+          </label>         
+              
+               
+                    <input id="user-name" class="form-control" type="text" placeholder="name" required="">
+                    </div>
+                    <div class="form-group"> 
+                
+                <label for="user-phone">
                     Phone:
-                    <input type="number" placeholder="phone number +380()" required="">
-                </label>
-                <br>
-                <button class="btn btn-danger">I wont a cake</button>
+                     </label>
+                    <input id="user-phone" class="form-control" type="number" placeholder="phone number" required="">
+                    </div>
+                
+                <button class="btn btn-danger btn-block">I wont a cake</button>
                 </form>
                 </div>
             </div>
@@ -334,7 +342,7 @@
                 <a href="#" class="fa fa-youtube"></a>
                 </div>
                 <div class="coppy_right">
-                <h5>© Created by StasDeveloper  All rights Reserved</h5>
+                <p>© Created by StasDeveloper  All rights Reserved</p>
                 </div>
             </nav>
         </footer>

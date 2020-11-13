@@ -65,7 +65,7 @@ grid-gap: 5px;
 }
 @media(min-width:800px){
 .products-list-cakes, .products-list-cookies,
-.products-list-cupcakes, .special_offer{
+.products-list-cupcakes {
     display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid: 5px;
@@ -81,7 +81,19 @@ header .banner{
     min-height: 500px;
     background-size:cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+   
     
+}
+.special_offer {
+    width:50%;
+    margin-trim: 10%;
+    flex: 1;
+    justify-content: space-around;
+}
+.promotion{
+    margin-right: 5em;
 }
 h1{
     display: flex;
@@ -173,5 +185,11 @@ margin: auto;
 .down_nav{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    
+}
+.coppy_right p{
+    color:#E22028;
+    font-size: 1rem;
+    text-align: center;
 }
