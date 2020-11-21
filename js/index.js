@@ -58,27 +58,27 @@ const cakesJson=
 {"name":"Cake Semio", "price": "$27.5/kg.", "src": "img/sweets/cakes/cake_semio.jpg"},
 {"name":"Cake Oreo", "price": "$29/kg.", "src": "img/sweets/cakes/cake_oreo.jpg"}
 ]`;
-const cakes=JSON.parse(cakesJson);
-console.log(cakes);
+
 const cookiesJson=`[
-{"name": "Cookies Bake", "price": "$15/kg." "src": "img/sweets/cookies/cookies_bake.jpg"},
-{"name": "Cookies Browni", "price": "$12/kg." "src": "img/sweets/cookies/cookies_brown.jpg"},
-{"name": "Cookies Buono", "price": "$14.5/kg." "src": "img/sweets/cookies/cookies_buono.jpg"},
-{"name": "Cookies Hell", "price": "$16.7/kg." "src": "img/sweets/cookies/cookies_hell.jpg"},
-{"name": "Cookies Hellowen", "price": "$17/kg." "src": "img/sweets/cookies/cookies_hellowen.jpg"}
+{"name": "Cookies Bake", "price": "$15/kg.", "src": "img/sweets/cookies/cookies_bake.jpg"},
+{"name": "Cookies Browni", "price": "$12/kg.", "src": "img/sweets/cookies/cookies_brown.jpg"},
+{"name": "Cookies Buono", "price": "$14.5/kg.", "src": "img/sweets/cookies/cookies_buono.jpg"},
+{"name": "Cookies Hell", "price": "$16.7/kg.", "src": "img/sweets/cookies/cookies_hell.jpg"},
+{"name": "Cookies Hellowen", "price": "$17/kg." ,"src": "img/sweets/cookies/cookies_hellowen.jpg"}
 ]`;
-const cookies=JSON.parse(cookiesJson);
+
 const cupcakesJson=`[
-{"name": "Cupcake Choco", "price": "$16/kg." "src": "img/sweets/cupcakes/cupcake_choco.jpg"},
-{"name": "Cupcake Fann", "price": "$18/kg." "src": "img/sweets/cupcakes/cupcake_fancake.jpg"},
-{"name": "Cupcake Oreo", "price": "$18/kg." "src": "img/sweets/cupcakes/cupcake_oreo.jpg"},
-{"name": "Cupcake Penual", "price": "$19/kg." "src": "img/sweets/cupcakes/cupcake_penual.jpg"},
-{"name": "Cupcake Strawberry", "price": "$17/kg." "src": "img/sweets/cupcakes/cupcake_strawberry.jpg"}
+{"name": "Cupcake Choco", "price": "$16/kg.", "src": "img/sweets/cupcakes/cupcake_choco.jpg"},
+{"name": "Cupcake Fann", "price": "$18/kg.", "src": "img/sweets/cupcakes/cupcake_fancake.jpg"},
+{"name": "Cupcake Oreo", "price": "$18/kg.", "src": "img/sweets/cupcakes/cupcake_oreo.jpg"},
+{"name": "Cupcake Penual", "price": "$19/kg.", "src": "img/sweets/cupcakes/cupcake_penual.jpg"},
+{"name": "Cupcake Strawberry", "price": "$17/kg.", "src": "img/sweets/cupcakes/cupcake_strawberry.jpg"}
 ]`;
     
-const cupcakes=JSON.parse(cupcakesJson);
+
 
 const prodCake=document.querySelector('.products-list-cakes');
+const cakes=JSON.parse(cakesJson);
 for(const productCake of cakes){
     prodCake.innerHTML+=`
 <article class="product-card">
@@ -92,6 +92,35 @@ for(const productCake of cakes){
     `;
 }
 
+const prodCookies=document.querySelector('.products-list-cookies');
+const cookieskes=JSON.parse(cookiesJson);
+for(const prodCookie of cookieskes){
+    prodCookies.innerHTML+=`
+<article class="product-card">
+    <img src=${prodCookie.src} alt="Cake">
+    <h3>${prodCookie.name}</h3>
+    <h3>${prodCookie.price}</h3>
+    <div class="product_buttom">
+         <button class="order_product  btn btn-danger">Order</button>
+    </div>
+ </article>
+    `;
+}
+
+const prodCupcakes=document.querySelector('.products-list-cupcakes');
+const cupcakes=JSON.parse(cupcakesJson);
+for(const prodCupcake of cupcakes){
+    prodCupcakes.innerHTML+=`
+<article class="product-card">
+    <img src=${prodCupcake.src} alt="Cake">
+    <h3>${prodCupcake.name}</h3>
+    <h3>${prodCupcake.price}</h3>
+    <div class="product_buttom">
+         <button class="order_product  btn btn-danger">Order</button>
+    </div>
+ </article>
+    `;
+}
 
 });
 
