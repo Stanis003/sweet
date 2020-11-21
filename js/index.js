@@ -58,7 +58,7 @@ const cakesJson=
 {"name": "Cake Semio", "price": "$27.5/kg." "src": "img/sweets/cakes/cake_semio.jpg"},
 {"name": "Cake Oreo", "price": "$29/kg." "src": "img/sweets/cakes/cake_oreo.jpg"},
 ]`;
-
+const cakes=JSON.parse(cakesJson);
 const cookiesJson=
 `[
 {"name": "Cookies Bake", "price": "$15/kg." "src": "img/sweets/cookies/cookies_bake.jpg"},
@@ -67,7 +67,7 @@ const cookiesJson=
 {"name": "Cookies Hell", "price": "$16.7/kg." "src": "img/sweets/cookies/cookies_hell.jpg"},
 {"name": "Cookies Hellowen", "price": "$17/kg." "src": "img/sweets/cookies/cookies_hellowen.jpg"},
 ]`;
-
+const cookies=JSON.parse(cookiesJson);
 const cupcakesJson=
 `[
 {"name": "Cupcake Choco", "price": "$16/kg." "src": "img/sweets/cupcakes/cupcake_choco.jpg"},
@@ -77,5 +77,5 @@ const cupcakesJson=
 {"name": "Cupcake Strawberry", "price": "$17/kg." "src": "img/sweets/cupcakes/cupcake_strawberry.jpg"},
 ]`;
     
-
+const cupcakes=JSON.parse(cupcakesJson);
 });
