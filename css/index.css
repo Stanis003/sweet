@@ -56,16 +56,16 @@ header nav .menu-items a{
     
 }
 @media(min-width:540px){
-.products-list-cakes, .products-list-cookies,
-.products-list-cupcakes, .candy_bar {
+.cakes, .cookies,
+.cupcakes, .candy_bar {
 display: grid;
 grid-template-columns: 1fr 1fr;
 grid-gap: 5px;
 }
 }
 @media(min-width:800px){
-.products-list-cakes, .products-list-cookies,
-.products-list-cupcakes {
+    .cakes, .cookies,
+    .cupcakes,{
     display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid: 5px;

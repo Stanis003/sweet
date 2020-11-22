@@ -50,77 +50,58 @@ window.addEventListener('DOMContentLoaded', function() {
 
 // Cards objects:
 
-const cakesJson=
-`[
+const prodJson=
+`{
+  "cakes" : [
 {"name":"Cake Vanila", "price": "$25/kg.", "src": "img/sweets/cakes/cake_lemon.jpg"},
 {"name":"Cake Red", "price": "$28/kg.", "src": "img/sweets/cakes/cake_red.jpg"},
 {"name":"Cake Reinbow", "price": "$26/kg.", "src": "img/sweets/cakes/cake_reinbow.jpg"},
 {"name":"Cake Semio", "price": "$27.5/kg.", "src": "img/sweets/cakes/cake_semio.jpg"},
 {"name":"Cake Oreo", "price": "$29/kg.", "src": "img/sweets/cakes/cake_oreo.jpg"}
-]`;
+  ],
 
-const cookiesJson=`[
+"cookies":[
 {"name": "Cookies Bake", "price": "$15/kg.", "src": "img/sweets/cookies/cookies_bake.jpg"},
 {"name": "Cookies Browni", "price": "$12/kg.", "src": "img/sweets/cookies/cookies_brown.jpg"},
 {"name": "Cookies Buono", "price": "$14.5/kg.", "src": "img/sweets/cookies/cookies_buono.jpg"},
 {"name": "Cookies Hell", "price": "$16.7/kg.", "src": "img/sweets/cookies/cookies_hell.jpg"},
-{"name": "Cookies Hellowen", "price": "$17/kg." ,"src": "img/sweets/cookies/cookies_hellowen.jpg"}
-]`;
+{"name": "Cookies Hellowen", "price": "$17/kg.","src": "img/sweets/cookies/cookies_hellowen.jpg"}
+],
 
-const cupcakesJson=`[
+"cupcakes":[
 {"name": "Cupcake Choco", "price": "$16/kg.", "src": "img/sweets/cupcakes/cupcake_choco.jpg"},
 {"name": "Cupcake Fann", "price": "$18/kg.", "src": "img/sweets/cupcakes/cupcake_fancake.jpg"},
 {"name": "Cupcake Oreo", "price": "$18/kg.", "src": "img/sweets/cupcakes/cupcake_oreo.jpg"},
 {"name": "Cupcake Penual", "price": "$19/kg.", "src": "img/sweets/cupcakes/cupcake_penual.jpg"},
 {"name": "Cupcake Strawberry", "price": "$17/kg.", "src": "img/sweets/cupcakes/cupcake_strawberry.jpg"}
-]`;
-    
+]
+}`;
+ 
 
+const listProduct=document.querySelector('.products-list'),
+    cakes=document.querySelector('.cakes'),
+    cookies=document.querySelector('.cookies'),
+    cupcakes=document.querySelector('.cupcakes'),
+    pructsPrice=JSON.parse(prodJson);
+ 
 
-const prodCake=document.querySelector('.products-list-cakes');
-const cakes=JSON.parse(cakesJson);
-for(const productCake of cakes){
-    prodCake.innerHTML+=`
-<article class="product-card">
-    <img src=${productCake.src} alt="Cake">
-    <h3>${productCake.name}</h3>
-    <h3>${productCake.price}</h3>
-    <div class="product_buttom">
-         <button class="order_product  btn btn-danger">Order</button>
-    </div>
- </article>
-    `;
-}
-
-const prodCookies=document.querySelector('.products-list-cookies');
-const cookieskes=JSON.parse(cookiesJson);
-for(const prodCookie of cookieskes){
-    prodCookies.innerHTML+=`
-<article class="product-card">
-    <img src=${prodCookie.src} alt="Cake">
-    <h3>${prodCookie.name}</h3>
-    <h3>${prodCookie.price}</h3>
-    <div class="product_buttom">
-         <button class="order_product  btn btn-danger">Order</button>
-    </div>
- </article>
-    `;
-}
-
-const prodCupcakes=document.querySelector('.products-list-cupcakes');
-const cupcakes=JSON.parse(cupcakesJson);
-for(const prodCupcake of cupcakes){
-    prodCupcakes.innerHTML+=`
-<article class="product-card">
-    <img src=${prodCupcake.src} alt="Cake">
-    <h3>${prodCupcake.name}</h3>
-    <h3>${prodCupcake.price}</h3>
-    <div class="product_buttom">
-         <button class="order_product  btn btn-danger">Order</button>
-    </div>
- </article>
-    `;
-}
+    function cardsView(selector){
+        for(const productCard of pructsPrice[`${selector.className}`]){
+        selector.innerHTML+=`
+        <article class="product-card">
+        <img src=${productCard.src} alt="Cake">
+        <h3>${productCard.name}</h3>
+        <h3>${productCard.price}</h3>
+        <div class="product_buttom">
+             <button class="order_product  btn btn-danger">Order</button>
+        </div>
+     </article>
+        `;
+        }
+    }
+cardsView(cakes);
+cardsView(cookies);
+cardsView(cupcakes);
 
 });
 
