@@ -4,14 +4,14 @@ window.addEventListener('DOMContentLoaded', function() {
     const deadline = '2020-11-30';
 
     function getTimeRemaining(endtime) {
-        const t = Date.parse(endtime) - Date.parse(new Date()),
-            days = Math.floor( (t/(1000*60*60*24)) ),
-            seconds = Math.floor( (t/1000) % 60 ),
-            minutes = Math.floor( (t/1000/60) % 60 ),
-            hours = Math.floor( (t/(1000*60*60) % 24) );
+        const total = Date.parse(endtime) - Date.parse(new Date()),
+            days = Math.floor( (total/(1000*60*60*24)) ),
+            seconds = Math.floor( (total/1000) % 60 ),
+            minutes = Math.floor( (total/1000/60) % 60 ),
+            hours = Math.floor( (total/(1000*60*60) % 24) );
 
         return {
-            'total': t,
+             total,
              days,
              hours,
              minutes,
@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     setClock('.timer', deadline);
 
-// Cards objects:
+// Cards objects
 
 const prodJson=
 `{
@@ -79,9 +79,9 @@ const prodJson=
  
 
 const listProduct=document.querySelector('.products-list'),
-    cakes=document.querySelector('.cakes'),
-    cookies=document.querySelector('.cookies'),
-    cupcakes=document.querySelector('.cupcakes'),
+    cakes=listProduct.querySelector('.cakes'),
+    cookies=listProduct.querySelector('.cookies'),
+    cupcakes=listProduct.querySelector('.cupcakes'),
     pructsPrice=JSON.parse(prodJson);
  
 
@@ -89,13 +89,13 @@ const listProduct=document.querySelector('.products-list'),
         for(const productCard of pructsPrice[`${selector.className}`]){
         selector.innerHTML+=`
         <article class="product-card">
-        <img src=${productCard.src} alt="Cake">
-        <h3>${productCard.name}</h3>
-        <h3>${productCard.price}</h3>
-        <div class="product_buttom">
-             <button class="order_product  btn btn-danger">Order</button>
-        </div>
-     </article>
+            <img src=${productCard.src} alt="Cake">
+            <h3>${productCard.name}</h3>
+            <h3>${productCard.price}</h3>
+            <div class="product_buttom">
+                <button class="order_product  btn btn-danger">Order</button>
+            </div>
+        </article>
         `;
         }
     }
