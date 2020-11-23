@@ -1,198 +1,253 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Merienda+One&family=Source+Sans+Pro&display=swap');
-:root{
+
+:root {
     font-family: 'Lato', sans-serif;
-    --main-color: rgb(108,100,110);
+    --main-color: rgb(108, 100, 110);
     scroll-behavior: smooth;
 }
-body{
+
+body {
     max-width: 980px;
     margin: auto;
 }
+
 .fa {
-  padding: 5px;
-  font-size: 20px;
-  width: 20px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-   color: red;
-}
-header nav .first_row{
-    display:flex;
-  
-    justify-content: space-between;
-   
+    padding: 5px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: red;
 }
 
-header nav .menu-items a{
+header nav .first_row {
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+header nav .menu-items a {
     display: block;
     color: var(--main-color);
-    border:1px solid transparent;
+    border: 1px solid transparent;
     padding: 3px;
     text-transform: uppercase;
 }
-@media(min-width:760px){
-   
+
+@media(min-width:760px) {
+
     header nav .menu-items {
         display: flex;
         align-items: flex-start;
         justify-content: space-around;
         flex: 1;
     }
-    .name_decorate{
-    display: flex;
-    align-items: flex-start;
-   
+
+    .name_decorate {
+        display: flex;
+        align-items: flex-start;
+
     }
-    .image_decor{
+
+    .image_decor {
         display: block;
         width: 50%;
     }
-    .dec{
+
+    .dec {
         margin: auto;
-        background-color:#FFFAF0;
+        background-color: #FFFAF0;
     }
-    
-    
-}
-@media(min-width:540px){
-.cakes, .cookies,
-.cupcakes, .candy_bar {
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-gap: 5px;
-}
-}
-@media(min-width:800px){
-    .cakes, .cookies,
-    .cupcakes,{
-    display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid: 5px;
+
 
 }
+
+@media(min-width:540px) {
+
+    .cakes,
+    .cookies,
+    .cupcakes,
+    .candy_bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
 }
-.menu-items a:hover{
+
+@media(min-width:800px) {
+
+    .cakes,
+    .cookies,
+    .cupcakes,
+        {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid: 5px;
+
+    }
+}
+
+.menu-items a:hover {
     border-color: 1px solid var(--main-color);
 }
 
-header .banner{
+header .banner {
     background: url("../img/details/konditer.jpg");
     min-height: 500px;
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
-   
+
+
+}
+
+.special_offer {
+    display: flex;
+    width: 100;
+    flex: 1;
+    flex-direction: column;
     
 }
-.special_offer {
-    width:50%;
-    margin-trim: 10%;
-    flex: 1;
-    justify-content: space-around;
-}
-.promotion{
+
+.promotion {
     margin-right: 5em;
 }
-h1{
+
+h1 {
     display: flex;
     font-size: 4.5rem;
 }
 
 
-#logup{
+#logup {
     max-width: 50px;
 }
-.logo{
-width: 70px;
+
+.logo {
+    width: 70px;
 }
-h1, h2, h3, h4{
+
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Merienda One', cursive;
     color: #454043;
     text-align: center;
 }
-p, a{
-    color: rgb(108,100,110);
+
+p,
+a {
+    color: rgb(108, 100, 110);
     font-size: 20px;
 }
-button{
-   font-family: 'Source Sans Pro', sans-serif;
+
+button {
+    font-family: 'Source Sans Pro', sans-serif;
 }
- img, .form_to_order
-{
+
+img,
+.form_to_order {
     display: block;
     width: 90%;
     margin: auto;
 }
-.product_buttom{
+
+.product_buttom {
     display: flex;
-justify-content: center;
+    justify-content: center;
 }
 
 .new-collections {
-  background-color: #f5f5f5;
-  
+    background-color: #f5f5f5;
+
 }
 
-.new-collections  h2 {
-  padding-top: 110px;
-  font-size: 30px;
-  text-align: center;
- 
+.new-collections h2 {
+    padding-top: 110px;
+    font-size: 30px;
+    text-align: center;
+
 }
 
 
 .collection-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .collection-list .card {
-  max-width: 320px;
+    max-width: 320px;
 }
 
 .collection-list .card img {
-  display: block;
-  width: 100%;
-  margin: auto;
+    display: block;
+    width: 100%;
+    margin: auto;
 }
 
 .collection-list .card h3 {
-  text-align: center;
-  font-size: 22px;
-  margin: 25px 0;
+    text-align: center;
+    font-size: 22px;
+    margin: 25px 0;
 }
-@media(min-width:540px){
-.wedding_cake, #order  {
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-gap: 5px;
-margin: auto;
+
+@media(min-width:540px) {
+
+    .wedding_cake,
+    #order {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+        margin: auto;
+    }
+
+    .describe_section {
+        text-align: start;
+        margin: auto;
+    }
 }
-.describe_section{
-    text-align: start;
-    margin: auto;
-}
-}
-.border, .product-card{
-        border-color: rgb(221, 210, 210);
+
+.border,
+.product-card {
+    border-color: rgb(221, 210, 210);
     border-width: 1px;
     border-style: solid;
     border-radius: 1%;
 }
-.down_nav{
+
+.down_nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
-.coppy_right p{
-    color:#E22028;
+
+.coppy_right p {
+    color: #E22028;
     font-size: 1rem;
     text-align: center;
 }
-.hide{
+
+.hide {
     display: none
+}
+.timer{
+  display: flex;
+   
+}
+
+.promotion__timer{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem; 
+
+}
+.timer__block{
+    display: flex;
+    align-content: column;
 }
