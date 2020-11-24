@@ -69,19 +69,32 @@ header nav .menu-items a {
     .cakes,
     .cookies,
     .cupcakes,
-    .candy_bar {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 5px;
+    .gri_inner, .gri_footer {
+        display:flex;
+        flex-wrap:wrap;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;  
+
     }
+
+
+    .candey_bar img{
+  
+        object-fit: cover;
+    }
+   
+
 }
 
 @media(min-width:800px) {
 
     .cakes,
     .cookies,
-    .cupcakes,
-        {
+    .cupcakes{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid: 5px;
@@ -92,55 +105,31 @@ header nav .menu-items a {
 .menu-items a:hover {
     border-color: 1px solid var(--main-color);
 }
-
-header .banner {
-    background: url("../img/details/konditer.jpg");
-    min-height: 500px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-
-
+header{
+background: url("../img/details/konditer.jpg");
+background-size: cover;
+background-position: center;
 }
 
-.special_offer {
-    display: flex;
-    width: 100;
-    flex: 1;
-    flex-direction: column;
-    
+.banner{
+    display: flex-start;
+    align-items:center;
 }
-
 .promotion {
     margin-right: 5em;
 }
 
-h1 {
-    display: flex;
-    font-size: 4.5rem;
-}
-
 
 #logup {
-    max-width: 50px;
+    max-width: 7rem;
 }
 
-.logo {
-    width: 70px;
-}
-
-h1,
-h2,
-h3,
-h4 {
+h1,h2,h3,h4 {
     font-family: 'Merienda One', cursive;
     color: #454043;
     text-align: center;
 }
-
-p,
-a {
+p,a {
     color: rgb(108, 100, 110);
     font-size: 20px;
 }
@@ -209,6 +198,28 @@ img,
     .describe_section {
         text-align: start;
         margin: auto;
+    }
+    .banner {
+        display: grid;
+        grid-template-rows: repeat (5, 1fr);
+        grid-template-columns: 1fr 1fr;
+    }
+    .but_baner{
+        grid-row: 5;
+     
+    }
+    .banner-location{
+        grid-row: 4;
+            
+    }
+    h1{
+        grid-column: 1;
+    }
+    
+    
+    .special_offer {
+        grid-column: 2;
+          
     }
 }
 

@@ -13,7 +13,29 @@
 
 <body>
     <header class="main_header">
-        <nav>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="index.html"><img src="img/dolce_natura.png" id="logup" alt="logo" class="resp"></a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="about_us.html">About Us <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contacts.html">Contacts<span class="sr-only">(current)</span></a>
+                </li>
+                </ul>
+              <div class="social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <button>Language <i class="fa fa-language"></i></button>
+            </div>
+            </div>
+        </nav>
+       <!-- <nav>
             <div class="logo">
                 <a href="index.html"><img src="img/dolce_natura.png" id="logup" alt="logo" class="resp"></a>
             </div>
@@ -32,12 +54,12 @@
                     <button>Language <i class="fa fa-language"></i></button>
                 </div>
             </div>
-        </nav>
+        </nav>-->
+
         <div class="banner">
             <h1>Dolce Cakes</h1>
             <div class="special_offer">
                 <div class="promotion__timer">
-                    <div class="title">Until the end of the offer:</div>
                     <div class="timer">
                         <div class="timer__block">
                             <span id="days">12</span>
@@ -57,16 +79,20 @@
                         </div>
                     </div>
                 </div>
-                <p class="promotion">Promotion: Hurry up to place an order for the amount of $ 100 or more of our
+                <div class="describe_sale"><p>Promotion: Hurry up to place an order for the amount of $ 100 or more of our
                     delicious products and get a 10% discount and free delivery around the city.</p>
-                <div class="banner-location">
-                    <p>Confectionery to order in Chernivtsi</p>
                 </div>
-
             </div>
-            <button class=" btn btn-danger">Our story</button>
+            <div class="banner-location">
+                    <p>Confectionery to order in Chernivtsi</p>
+            </div>
+            <div class="but_baner">
+                <button class=" btn btn-danger">Our story</button>
+            </div>
+            
         </div>
-
+          
+       
     </header>
     <main>
         <section>
@@ -107,12 +133,16 @@
                 most delicious desserts are offered: mini cheesecakes, cakes, cupcakes, muffins, strudels and more. You
                 can select your children’s favorite sweets from our catalogue and order custom decoration.</p>
             <div class="candy_bar">
-                <img src="img/candy_bar/candt_bar_kids.jpg" alt="Candy bar">
-                <img src="img/candy_bar/candy_bar_bday.jpg" alt="Candy bar">
-                <img src="img/candy_bar/candy_bar_wedding.jpg" alt="Candy bar">
-                <img src="img/candy_bar/candy_bar.jpg" alt="Candy bar">
-                <img src="img/candy_bar/candy_bar_rose.jpg" alt="Candy bar">
-                <img src="img/candy_bar/candy_bar_kid.jpg" alt="Candy bar">
+                <div class="gri_inner">
+                    <img src="img/candy_bar/candt_bar_kids.jpg" alt="Candy bar">
+                    <img src="img/candy_bar/candy_bar_bday.jpg" alt="Candy bar">
+                    <img src="img/candy_bar/candy_bar_wedding.jpg" alt="Candy bar">
+                </div>
+                <div class="gri_footer">  
+                    <img src="img/candy_bar/candy_bar.jpg" alt="Candy bar">
+                    <img src="img/candy_bar/candy_bar_rose.jpg" alt="Candy bar">
+                    <img src="img/candy_bar/candy_bar_kid.jpg" alt="Candy bar">
+                </div>  
             </div>
         </section>
         <section class="new-collections">
