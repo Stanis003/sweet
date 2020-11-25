@@ -59,6 +59,12 @@ header nav .menu-items a {
         margin: auto;
         background-color: #FFFAF0;
     }
+    .products-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid: 5px;
+
+    }
 }
 
 @media(min-width:540px) {
@@ -83,13 +89,11 @@ header nav .menu-items a {
 
 }
 
-@media(min-width:800px) {
+@media(min-width:500px) {
 
-    .cakes,
-    .cookies,
-    .cupcakes {
+    .products-list {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid: 5px;
 
     }
@@ -119,17 +123,13 @@ header {
     max-width: 7rem;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
     font-family: 'Merienda One', cursive;
     color: #454043;
     text-align: center;
 }
 
-p,
-a {
+p, a {
     color: rgb(108, 100, 110);
     font-size: 20px;
 }
@@ -141,7 +141,7 @@ button {
 img,
 .form_to_order {
     display: block;
-    width: 90%;
+    max-width: 100%;
     margin: auto;
 }
 
@@ -281,7 +281,9 @@ img,
     align-items: flex-end
 }
 
-.offer__slider-counter {
+.offer__slider-counter, 
+.offer__slider-counterCo,
+.offer__slider-counterCu  {
     display: flex;
     width: 180px;
     align-items: center;
@@ -296,19 +298,22 @@ img,
 }
 
 .offer__slider-prev,
-.offer__slider-prevCo {
+.offer__slider-prevCo,
+.offer__slider-prevCu {
     margin-right: 10px;
     cursor: pointer
 }
 
 .offer__slider-next,
-.offer__slider-nextCo {
+.offer__slider-nextCo,
+.offer__slider-nextCu{
     margin-left: 10px;
     cursor: pointer
 }
 
 .offer__slider #current,
-.offer__slider #currentCo {
+.offer__slider #currentCo,
+.offer__slider #currentCu{
     font-size: 48px;
     font-weight: 700;
     color: #000

@@ -197,5 +197,51 @@ window.addEventListener('DOMContentLoaded', function () {
         plusSlidesCo(1);
     });
 
+    let slideIndexCu = 1;
+    const slidesCu = document.querySelectorAll('.cupcakes_card'),
+        prevCu = document.querySelector('.offer__slider-prevCu'),
+        nextCu = document.querySelector('.offer__slider-nextCu'),
+        totalCu = document.querySelector('#totalCu'),
+        currentCu = document.querySelector('#currentCu');
+
+    showSlidesCu(slideIndexCu);
+
+    if (slidesCu.length < 10) {
+        totalCu.textCuntent = `0${slidesCu.length}`;
+    } else {
+        totalCu.textCuntent = slidesCu.length;
+    }
+
+    function showSlidesCu(n) {
+        if (n > slidesCu.length) {
+            slideIndexCu = 1;
+        }
+        if (n < 1) {
+            slideIndexCu = slidesCu.length;
+        }
+
+        slidesCu.forEach((item) => item.style.display = 'none');
+
+        slidesCu[slideIndexCu - 1].style.display = 'block';
+
+        if (slidesCu.length < 10) {
+            currentCu.textCuntent = `0${slideIndexCu}`;
+        } else {
+            currentCu.textCuntent = slideIndexCu;
+        }
+    }
+
+    function plusSlidesCu(n) {
+        showSlidesCu(slideIndexCu += n);
+    }
+
+    prevCu.addEventListener('click', function () {
+        plusSlidesCu(-1);
+    });
+
+    nextCu.addEventListener('click', function () {
+        plusSlidesCu(1);
+    });
+
 
 });
