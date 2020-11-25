@@ -105,7 +105,7 @@ cardsView(cookies);
 cardsView(cupcakes);
 
 //s
-let slideIndex = 1;
+    let slideIndex = 1;
     const slides = document.querySelectorAll('.cakes_card'),
         prev = document.querySelector('.offer__slider-prev'),
         next = document.querySelector('.offer__slider-next'),
@@ -130,7 +130,7 @@ let slideIndex = 1;
 
         slides.forEach((item) => item.style.display = 'none');
 
-        slides[slideIndex - 1].style.display = 'block'; // Как ваша самостоятельная работа - переписать на использование классов show/hide
+        slides[slideIndex - 1].style.display = 'block'; 
         
         if (slides.length < 10) {
             current.textContent =  `0${slideIndex}`;
@@ -151,7 +151,52 @@ let slideIndex = 1;
         plusSlides(1);
     });
 
-    
+    let slideIndexCo = 1;
+    const slidesCo = document.querySelectorAll('.cookies_card'),
+        prevCo = document.querySelector('.offer__slider-prevCo'),
+        nextCo = document.querySelector('.offer__slider-nextCo'),
+        totalCo = document.querySelector('#totalCo'),
+        currentCo = document.querySelector('#currentCo');
+
+    showSlidesCo(slideIndexCo);
+
+    if (slidesCo.length < 10) {
+        totalCo.textContent = `0${slidesCo.length}`;
+    } else {
+        totalCo.textContent = slidesCo.length;
+    }
+
+    function showSlidesCo(n) {
+        if (n > slidesCo.length) {
+            slideIndexCo = 1;
+        }
+        if (n < 1) {
+            slideIndexCo = slidesCo.length;
+        }
+
+        slidesCo.forEach((item) => item.style.display = 'none');
+
+        slidesCo[slideIndexCo - 1].style.display = 'block'; 
+        
+        if (slidesCo.length < 10) {
+            currentCo.textContent =  `0${slideIndexCo}`;
+        } else {
+            currentCo.textContent =  slideIndexCo;
+        }
+    }
+
+    function plusSlidesCo (n) {
+        showSlidesCo(slideIndexCo += n);
+    }
+
+    prevCo.addEventListener('click', function(){
+        plusSlidesCo(-1);
+    });
+
+    nextCo.addEventListener('click', function(){
+        plusSlidesCo(1);
+    });
+
 
 });
 
