@@ -1,26 +1,26 @@
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function () {
 
     //Timer
     const deadline = '2020-11-30';
 
     function getTimeRemaining(endtime) {
         const total = Date.parse(endtime) - Date.parse(new Date()),
-            days = Math.floor( (total/(1000*60*60*24)) ),
-            seconds = Math.floor( (total/1000) % 60 ),
-            minutes = Math.floor( (total/1000/60) % 60 ),
-            hours = Math.floor( (total/(1000*60*60) % 24) );
+            days = Math.floor((total / (1000 * 60 * 60 * 24))),
+            seconds = Math.floor((total / 1000) % 60),
+            minutes = Math.floor((total / 1000 / 60) % 60),
+            hours = Math.floor((total / (1000 * 60 * 60) % 24));
 
         return {
-             total,
-             days,
-             hours,
-             minutes,
-             seconds
+            total,
+            days,
+            hours,
+            minutes,
+            seconds
         };
     }
 
-    var getZero=num=>(num>= 0 && num < 10)?'0' + num:num;
-        
+    var getZero = num => (num >= 0 && num < 10) ? '0' + num : num;
+
     function setClock(selector, endtime) {
 
         const timer = document.querySelector(selector),
@@ -48,10 +48,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
     setClock('.timer', deadline);
 
-// Cards objects
+    // Cards objects
 
-const prodJson=
-`{
+    const prodJson =
+        `{
   "cakes" : [
 {"name":"Cake Vanila", "price": "$25/kg.", "src": "img/sweets/cakes/cake_lemon.jpg"},
 {"name":"Cake Red", "price": "$28/kg.", "src": "img/sweets/cakes/cake_red.jpg"},
@@ -76,18 +76,18 @@ const prodJson=
 {"name": "Cupcake Strawberry", "price": "$17/kg.", "src": "img/sweets/cupcakes/cupcake_strawberry.jpg"}
 ]
 }`;
- 
 
-const listProduct=document.querySelector('.products-list'),
-    cakes=listProduct.querySelector('.cakes'),
-    cookies=listProduct.querySelector('.cookies'),
-    cupcakes=listProduct.querySelector('.cupcakes'),
-    pructsPrice=JSON.parse(prodJson);
- 
 
-    function cardsView(selector){
-        for(const productCard of pructsPrice[`${selector.className}`]){
-        selector.innerHTML+=`
+    const listProduct = document.querySelector('.products-list'),
+        cakes = listProduct.querySelector('.cakes'),
+        cookies = listProduct.querySelector('.cookies'),
+        cupcakes = listProduct.querySelector('.cupcakes'),
+        pructsPrice = JSON.parse(prodJson);
+
+
+    function cardsView(selector) {
+        for (const productCard of pructsPrice[`${selector.className}`]) {
+            selector.innerHTML += `
         
         <article class="product-card ${selector.className+'_card'}">
             <img src=${productCard.src} alt="Cake">
@@ -100,11 +100,11 @@ const listProduct=document.querySelector('.products-list'),
         `;
         }
     }
-cardsView(cakes);
-cardsView(cookies);
-cardsView(cupcakes);
+    cardsView(cakes);
+    cardsView(cookies);
+    cardsView(cupcakes);
 
-//s
+    //slider
     let slideIndex = 1;
     const slides = document.querySelectorAll('.cakes_card'),
         prev = document.querySelector('.offer__slider-prev'),
@@ -130,24 +130,24 @@ cardsView(cupcakes);
 
         slides.forEach((item) => item.style.display = 'none');
 
-        slides[slideIndex - 1].style.display = 'block'; 
-        
+        slides[slideIndex - 1].style.display = 'block';
+
         if (slides.length < 10) {
-            current.textContent =  `0${slideIndex}`;
+            current.textContent = `0${slideIndex}`;
         } else {
-            current.textContent =  slideIndex;
+            current.textContent = slideIndex;
         }
     }
 
-    function plusSlides (n) {
+    function plusSlides(n) {
         showSlides(slideIndex += n);
     }
 
-    prev.addEventListener('click', function(){
+    prev.addEventListener('click', function () {
         plusSlides(-1);
     });
 
-    next.addEventListener('click', function(){
+    next.addEventListener('click', function () {
         plusSlides(1);
     });
 
@@ -176,27 +176,26 @@ cardsView(cupcakes);
 
         slidesCo.forEach((item) => item.style.display = 'none');
 
-        slidesCo[slideIndexCo - 1].style.display = 'block'; 
-        
+        slidesCo[slideIndexCo - 1].style.display = 'block';
+
         if (slidesCo.length < 10) {
-            currentCo.textContent =  `0${slideIndexCo}`;
+            currentCo.textContent = `0${slideIndexCo}`;
         } else {
-            currentCo.textContent =  slideIndexCo;
+            currentCo.textContent = slideIndexCo;
         }
     }
 
-    function plusSlidesCo (n) {
+    function plusSlidesCo(n) {
         showSlidesCo(slideIndexCo += n);
     }
 
-    prevCo.addEventListener('click', function(){
+    prevCo.addEventListener('click', function () {
         plusSlidesCo(-1);
     });
 
-    nextCo.addEventListener('click', function(){
+    nextCo.addEventListener('click', function () {
         plusSlidesCo(1);
     });
 
 
 });
-

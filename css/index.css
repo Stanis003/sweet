@@ -66,25 +66,25 @@ header nav .menu-items a {
 
 @media(min-width:540px) {
 
-    .products_list
-    .gri_inner, .gri_footer {
-        display:flex;
-        flex-wrap:wrap;
+    .products_list .gri_inner,
+    .gri_footer {
+        display: flex;
+        flex-wrap: wrap;
         margin: 0;
         padding: 0;
         border: 0;
         font-size: 100%;
         font: inherit;
-        vertical-align: baseline;  
+        vertical-align: baseline;
 
     }
 
 
-    .candey_bar img{
-  
+    .candey_bar img {
+
         object-fit: cover;
     }
-   
+
 
 }
 
@@ -92,7 +92,7 @@ header nav .menu-items a {
 
     .cakes,
     .cookies,
-    .cupcakes{
+    .cupcakes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid: 5px;
@@ -103,16 +103,18 @@ header nav .menu-items a {
 .menu-items a:hover {
     border-color: 1px solid var(--main-color);
 }
-header{
-background: url("../img/details/konditer.jpg");
-background-size: cover;
-background-position: center;
+
+header {
+    background: url("../img/details/konditer.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-.banner{
+.banner {
     display: flex-start;
-    align-items:center;
+    align-items: center;
 }
+
 .promotion {
     margin-right: 5em;
 }
@@ -122,12 +124,17 @@ background-position: center;
     max-width: 7rem;
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Merienda One', cursive;
     color: #454043;
     text-align: center;
 }
-p,a {
+
+p,
+a {
     color: rgb(108, 100, 110);
     font-size: 20px;
 }
@@ -197,27 +204,31 @@ img,
         text-align: start;
         margin: auto;
     }
+
     .banner {
         display: grid;
         grid-template-rows: repeat (5, 1fr);
         grid-template-columns: 1fr 1fr;
     }
-    .but_baner{
+
+    .but_baner {
         grid-row: 5;
-     
+
     }
-    .banner-location{
+
+    .banner-location {
         grid-row: 4;
-            
+
     }
-    h1{
+
+    h1 {
         grid-column: 1;
     }
-    
-    
+
+
     .special_offer {
         grid-column: 2;
-          
+
     }
 }
 
@@ -245,53 +256,89 @@ img,
 .hide {
     display: none
 }
+
 .show {
     display: block
 }
-.timer{
-  display: flex;
-   
+
+.timer {
+    display: flex;
+
 }
 
-.promotion__timer{
+.promotion__timer {
     display: flex;
     justify-content: center;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
 
 }
-.timer__block{
+
+.timer__block {
     display: flex;
     align-content: column;
 }
+
 .offer__slider {
-    width:650px;
-    margin-top:50px;
-    display:flex;flex-direction:column;
-    align-items:flex-end}
-    
-    .offer__slider-counter{
-        display:flex;
-        width:180px;
-        align-items:center;
-        font-size:24px;
-        color:rgba(0,0,0,.5)
-    }
+    width: 650px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end
+}
 
-        .offer__slider-wrapper{
-            width:100%;margin-top:15px;box-shadow:0 4px 30px rgba(0,0,0,.25)}
-            .offer__slider-prev, .offer__slider-prevCo {margin-right:10px;cursor:pointer}
-            .offer__slider-next, .offer__slider-nextCo {margin-left:10px;cursor:pointer}
-            .offer__slider #current, .offer__slider #currentCo{font-size:48px;font-weight:700;color:#000}
-            .offer__slide{width:100%;height:390px}
-            .offer__slide img{width:100%;height:100%;object-fit:cover}
+.offer__slider-counter {
+    display: flex;
+    width: 180px;
+    align-items: center;
+    font-size: 24px;
+    color: rgba(0, 0, 0, .5)
+}
 
-            .wedding_cake{
-                background: rgb(243, 242, 229)
-            }
-            #order{
+.offer__slider-wrapper {
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .25)
+}
+
+.offer__slider-prev,
+.offer__slider-prevCo {
+    margin-right: 10px;
+    cursor: pointer
+}
+
+.offer__slider-next,
+.offer__slider-nextCo {
+    margin-left: 10px;
+    cursor: pointer
+}
+
+.offer__slider #current,
+.offer__slider #currentCo {
+    font-size: 48px;
+    font-weight: 700;
+    color: #000
+}
+
+.offer__slide {
+    width: 100%;
+    height: 390px
+}
+
+.offer__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.wedding_cake {
+    background: rgb(243, 242, 229)
+}
+
+#order {
     background-color: #f5f5f5;
-            }
-            .sweets{
-                   background-color: #f5f5f5;
- 
-            }
+}
+
+.sweets {
+    background-color: #f5f5f5;
+
+}
