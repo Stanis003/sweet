@@ -1,83 +1,90 @@
-{
-    "cakes": [
-        {
-            "name": "Cake Vanila",
-            "price": "$25/kg.",
-            "src": "img/sweets/cakes/cake_lemon.jpg"
-        },
-        {
-            "name": "Cake Red",
-            "price": "$28/kg.",
-            "src": "img/sweets/cakes/cake_red.jpg"
-        },
-        {
-            "name": "Cake Reinbow",
-            "price": "$26/kg.",
-            "src": "img/sweets/cakes/cake_reinbow.jpg"
-        },
-        {
-            "name": "Cake Semio",
-            "price": "$27.5/kg.",
-            "src": "img/sweets/cakes/cake_semio.jpg"
-        },
-        {
-            "name": "Cake Oreo",
-            "price": "$29/kg.",
-            "src": "img/sweets/cakes/cake_oreo.jpg"
-        }
-    ],
-    "cookies": [
-        {
-            "name": "Cookies Bake",
-            "price": "$15/kg.",
-            "src": "img/sweets/cookies/cookies_bake.jpg"
-        },
-        {
-            "name": "Cookies Browni",
-            "price": "$12/kg.",
-            "src": "img/sweets/cookies/cookies_brown.jpg"
-        },
-        {
-            "name": "Cookies Buono",
-            "price": "$14.5/kg.",
-            "src": "img/sweets/cookies/cookies_buono.jpg"
-        },
-        {
-            "name": "Cookies Hell",
-            "price": "$16.7/kg.",
-            "src": "img/sweets/cookies/cookies_hell.jpg"
-        },
-        {
-            "name": "Cookies Hellowen",
-            "price": "$17/kg.",
-            "src": "img/sweets/cookies/cookies_hellowen.jpg"
-        }
-    ],
-    "cupcakes": [
-        {
-            "name": "Cupcake Choco",
-            "price": "$16/kg.",
-            "src": "img/sweets/cupcakes/cupcake_choco.jpg"
-        },
-        {
-            "name": "Cupcake Fann",
-            "price": "$18/kg.",
-            "src": "img/sweets/cupcakes/cupcake_fancake.jpg"
-        },
-        {
-            "name": "Cupcake Oreo",
-            "price": "$18/kg.",
-            "src": "img/sweets/cupcakes/cupcake_oreo.jpg"
-        },
-        {
-            "name": "Cupcake Penual",
-            "price": "$19/kg.",
-            "src": "img/sweets/cupcakes/cupcake_penual.jpg"
-        },
-        {
-            "name": "Cupcake Strawberry",
-            "price": "$17/kg.",
-            "src": "img/sweets/cupcakes/cupcake_strawberry.jpg"
-        }
-    ]
-}
+[{
+    "id": "1",
+    "category": "cakes",
+    "price": "$25/kg.",
+    "src": "img/sweets/cakes/cake_lemon.jpg"
+}, {
+    "id": "2",
+    "category": "cakes",
+    "name": "Cake Red",
+    "price": "$28/kg.",
+    "src": "img/sweets/cakes/cake_red.jpg"
+}, {
+    "id": "3",
+    "category": "cakes",
+    "name": "Cake Reinbow",
+    "price": "$26/kg.",
+    "src": "img/sweets/cakes/cake_reinbow.jpg"
+}, {
+    "id": "4",
+    "category": "cakes",
+    "name": "Cake Semio",
+    "price": "$27.5/kg.",
+    "src": "img/sweets/cakes/cake_semio.jpg"
+}, {
+    "id": "5",
+    "category": "cakes",
+    "name": "Cake Oreo",
+    "price": "$29/kg.",
+    "src": "img/sweets/cakes/cake_oreo.jpg"
+}, {
+    "id": "6",
+    "category": "cakes",
+    "name": "Cookies Bake",
+    "price": "$15/kg.",
+    "src": "img/sweets/cookies/cookies_bake.jpg"
+}, {
+    "id": "7",
+    "category": "cakes",
+    "name": "Cookies Browni",
+    "price": "$12/kg.",
+    "src": "img/sweets/cookies/cookies_brown.jpg"
+}, {
+    "id": "8",
+    "category": "cakes",
+    "name": "Cookies Buono",
+    "price": "$14.5/kg.",
+    "src": "img/sweets/cookies/cookies_buono.jpg"
+}, {
+    "id": "9",
+    "category": "cakes",
+    "name": "Cookies Hell",
+    "price": "$16.7/kg.",
+    "src": "img/sweets/cookies/cookies_hell.jpg"
+}, {
+    "id": "10",
+    "category": "cakes",
+    "name": "Cookies Hellowen",
+    "price": "$17/kg.",
+    "src": "img/sweets/cookies/cookies_hellowen.jpg"
+}, {
+    "id": "11",
+    "category": "cakes",
+    "name": "Cupcake Choco",
+    "price": "$16/kg.",
+    "src": "img/sweets/cupcakes/cupcake_choco.jpg"
+}, {
+    "id": "12",
+    "category": "cakes",
+    "name": "Cupcake Fann",
+    "price": "$18/kg.",
+    "src": "img/sweets/cupcakes/cupcake_fancake.jpg"
+}, {
+    "id": "13",
+    "category": "cakes",
+    "name": "Cupcake Oreo",
+    "price": "$18/kg.",
+    "src": "img/sweets/cupcakes/cupcake_oreo.jpg"
+}, {
+    "id": "14",
+    "category": "cakes",
+    "name": "Cupcake Penual",
+    "price": "$19/kg.",
+    "src": "img/sweets/cupcakes/cupcake_penual.jpg"
+}, {
+    "id": "15",
+    "category": "cakes",
+    "name": "Cupcake Strawberry",
+    "price": "$17/kg.",
+    "src": "img/sweets/cupcakes/cupcake_strawberry.jpg"
+}]

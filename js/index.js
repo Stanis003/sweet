@@ -1,3 +1,5 @@
+new ProductList(new Cart());
+
 window.addEventListener('DOMContentLoaded', function () {
 
     //Timer
@@ -50,6 +52,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // Cards objects
 
+
     const prodJson =
         ``;
 
@@ -65,12 +68,12 @@ window.addEventListener('DOMContentLoaded', function () {
         for (const productCard of pructsPrice[`${selector.className}`]) {
             selector.innerHTML += `
         
-        <article class="product-card ${selector.className+'_card'}">
+        <article class="product-card ${selector.className + '_card'}">
             <img src=${productCard.src} alt="Cake">
             <h3>${productCard.name}</h3>
             <h3>${productCard.price}</h3>
             <div class="product_buttom">
-                <button class="order_product  btn btn-danger">Order</button>
+                <button class="order_product  btn btn-danger .product">Order</button>
             </div>
         </article>
         `;
@@ -218,23 +221,6 @@ window.addEventListener('DOMContentLoaded', function () {
     nextCu.addEventListener('click', function () {
         plusSlidesCu(1);
     });
-//Service
 
-    class ProductsService {
-        constructor() {
-            if (!ProductsService._instance) ProductsService._instance = this;
-            return ProductsService._instance;
-        }
-        async getProducts() {
-            if (!this.products) {
-                this.products = await (await fetch('products.json')).json();
-            }
-            return this.products;
-        }
-        async getProductById(id) {
-            const products = await this.getProducts();
-            return products.find( product => product.id === id );
-        }
-    }
 
 });
