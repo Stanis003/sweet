@@ -221,3 +221,77 @@ new ProductList(new Cart());
     // });
 
 
+//Forms
+const forms = document.querySelector('.order__form');
+const messege = {
+    loading: 'img/form/spinner.svg',
+    success: 'Thanks!',
+    failure: 'Something wrong!'
+};
+
+
+function postData(form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const statuMessage = document.createElement('img');
+        statuMessage.src = messege.loading;
+        statuMessage.style.cssText = `
+        display:block;
+        margin: 0 auto;`;
+        form.insertAdjacentElement('afterend', statuMessage);
+
+
+        const formData = new FormData(form);
+        const json =JSON.stringify(Object.fromEntries(formData.entries));
+
+
+
+        fetch('server.php', {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: json
+            }).then(data => data.text())
+            .then(data => {
+                console.log(data);
+                showThanksModal(messege.success);
+                statuMessage.remove();
+            }).catch(() => {
+                showThanksModal(messege.failure);
+
+            }).finally(() => {
+                form.reset();
+
+            });
+
+    });
+}
+
+function showThanksModal(messege) {
+    const prevModalDiaolg = document.querySelector('.modal__dialog');
+
+    prevModalDiaolg.classList.add('hide');
+
+    openModal();
+
+    const thanksModal = document.createElement('div');
+    thanksModal.classList.add('modal__dialog');
+    thanksModal.innerHTML = `
+<div class="modal__content">
+<div class="modal__close>&times;</div>
+<divclass="modal__title>${messege}</div>
+</div>
+`;
+
+    document.querySelector('modal').append(thanksModal);
+
+    setTimeout(() => {
+        thanksModal.remove();
+        prevModalDiaolg.classList.add('show');
+        prevModalDiaolg.classList.remove('hide');
+        closeModal();
+    }, 4000);
+
+}

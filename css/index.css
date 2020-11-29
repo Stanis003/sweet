@@ -45,7 +45,7 @@ header nav .menu-items a {
         flex: 1;
     }
 
-    .name_decorate, .history{
+    .name_decorate{
         display: flex;
         align-items: flex-start;
     }
@@ -76,7 +76,7 @@ header nav .menu-items a {
 }
 @media(min-width:540px){
 
-    .wedding_cake,
+    .wedding_cake, .history
     #order {
         display: grid;
         grid-template-columns: 1fr 1fr;
