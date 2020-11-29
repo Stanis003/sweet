@@ -1,41 +1,75 @@
+// class Slider{
+// constructor(){
+//   this.cakesContainers = document.querySelectorAll('.slider');
+//   this.container = document.querySelector('.products-list');
+//   this.renderSlider();
+// }
+
+// async renderSlider(){
+//   this.cakesContainers.forEach(contain=>{
+//     const element = document.createElement('div');
+//     element.classList.add('offer__slider-counter');
+//     element.innerHTML=`
+//        <div class="offer__slider-prev">
+             
+//        <img src="icons/left.svg" alt="prev">
+//          </div>
+//                         <span id="current">03</span>
+//                         /
+//                         <span id="total">04</span>
+//                         <div class="offer__slider-next">
+//                             <img src="icons/right.svg" alt="next">
+//                         </div>               
+//     `;
+//     contain.append(element);
+
+//   });
+// }
+// addEventListener(){
+
+// }
+
+// }
+
 class ProductList {
   constructor(cart) {
     this.cart = cart;
-    this.container = document.querySelector('.products-container');
+    this.container = document.querySelector('.carousel');
+    // this.slide = new Slider();
     this.productService = new ProductsService();
-    this.productService
+        this.productService
       .getProducts()
       .then(() => this.renderProducts())
-      .then(() => this.addEventListeners());    
+      .then(() => this.addEventListeners());
   }
+
   async renderProducts() {
-    let productListDomString = '';
+    //let productListDomString = '';
     const products = await this.productService.getProducts();
     [...products]
       // .sort( (a, b) => this.sortDirection === 'ascending' 
       //                    ? a.price - b.price
       //                    : b.price - a.price)
       .forEach(product => {
-      productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                  <div class="card product">
-                    <img class="card-img-top" src="img/products/${product.image}" 
-                        alt="${product.title}">
-                    <div class="card-body d-flex flex-column">
-                      <h4 class="card-title">${product.title}</h4>
-                      <p class="card-text flex-fill">${product.description}</p>
-                      <div class="d-flex justify-content-around">
-                        <button class="btn btn-info" data-toggle="modal"
-                          data-target="#productInfoModal" data-id="${product.id}">Info
-                        </button>
-                        <button class="btn btn-primary buy" data-id="${product.id}">
-                          $${product.price} - Buy
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>`;
-    });
-    this.container.innerHTML = productListDomString;
+        const element = document.createElement('div');
+        element.classList.add(`carousel-item`);
+        element.interval='1000';
+        element.innerHTML += `
+          <article class="product-card">
+          <img src=${product.src} alt="Cake">
+          <h3>${product.name}</h3>
+          <h3>$${product.price}/kg.</h3>
+          <div class="product_buttom">
+            <button class="order_product  btn btn-primary buy btn-danger" data-id="${product.id}">Buy</button>
+          </div>
+          </article>
+           `; 
+          document.querySelector(`.${product.category}Card`).append(element);
+      });
+      document.querySelectorAll('.carousel-inner').forEach(element=>{
+        element.firstElementChild.classList.add('active');
+      });
+   
   }
   async addEventListeners() {
     // document
@@ -47,7 +81,7 @@ class ProductList {
     //   );
     document
       .querySelectorAll(
-        '.card.product button.buy, #productInfoModal button.buy'
+        'button.buy, #productInfoModal button.buy'
       )
       .forEach(button =>
         button.addEventListener('click', event =>

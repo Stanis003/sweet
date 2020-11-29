@@ -45,7 +45,7 @@ header nav .menu-items a {
         flex: 1;
     }
 
-    .name_decorate {
+    .name_decorate, .history{
         display: flex;
         align-items: flex-start;
     }
@@ -158,6 +158,8 @@ p, a {
 }
 button {
     font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
     
 }
  button.dec{
@@ -339,4 +341,8 @@ img,
 .sweets {
     padding: 1em;
     background-color: #f5f5f5;
+}
+.advantages{
+    display: flex;
+    align-items:d
 }

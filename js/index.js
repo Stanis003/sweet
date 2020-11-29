@@ -1,8 +1,6 @@
 new ProductList(new Cart());
 
-window.addEventListener('DOMContentLoaded', function () {
-
-    //Timer
+   //Timer
     const deadline = '2020-11-30';
 
     function getTimeRemaining(endtime) {
@@ -53,174 +51,173 @@ window.addEventListener('DOMContentLoaded', function () {
     // Cards objects
 
 
-    const prodJson =
-        ``;
+    // const prodJson =
+    //     ``;
 
 
-    const listProduct = document.querySelector('.products-list'),
-        cakes = listProduct.querySelector('.cakes'),
-        cookies = listProduct.querySelector('.cookies'),
-        cupcakes = listProduct.querySelector('.cupcakes'),
-        pructsPrice = JSON.parse(prodJson);
+    // const listProduct = document.querySelector('.products-list'),
+    //     cakes = listProduct.querySelector('.cakes'),
+    //     cookies = listProduct.querySelector('.cookies'),
+    //     cupcakes = listProduct.querySelector('.cupcakes'),
+    //     pructsPrice = JSON.parse(prodJson);
 
 
-    function cardsView(selector) {
-        for (const productCard of pructsPrice[`${selector.className}`]) {
-            selector.innerHTML += `
+    // function cardsView(selector) {
+    //     for (const productCard of pructsPrice[`${selector.className}`]) {
+    //         selector.innerHTML += `
         
-        <article class="product-card ${selector.className + '_card'}">
-            <img src=${productCard.src} alt="Cake">
-            <h3>${productCard.name}</h3>
-            <h3>${productCard.price}</h3>
-            <div class="product_buttom">
-                <button class="order_product  btn btn-danger .product">Order</button>
-            </div>
-        </article>
-        `;
-        }
-    }
-    cardsView(cakes);
-    cardsView(cookies);
-    cardsView(cupcakes);
+    //     <article class="product-card ${selector.className + '_card'}">
+    //         <img src=${productCard.src} alt="Cake">
+    //         <h3>${productCard.name}</h3>
+    //         <h3>${productCard.price}</h3>
+    //         <div class="product_buttom">
+    //             <button class="order_product  btn btn-danger .product">Order</button>
+    //         </div>
+    //     </article>
+    //     `;
+    //     }
+    // }
+    // cardsView(cakes);
+    // cardsView(cookies);
+    // cardsView(cupcakes);
 
     //slider
-    let slideIndex = 1;
-    const slides = document.querySelectorAll('.cakes_card'),
-        prev = document.querySelector('.offer__slider-prev'),
-        next = document.querySelector('.offer__slider-next'),
-        total = document.querySelector('#total'),
-        current = document.querySelector('#current');
+    // let slideIndex = 1;
+    // const slides = document.querySelectorAll('.cakes_card'),
+    //     prev = document.querySelector('.offer__slider-prev'),
+    //     next = document.querySelector('.offer__slider-next'),
+    //     total = document.querySelector('#total'),
+    //     current = document.querySelector('#current');
 
-    showSlides(slideIndex);
+    // showSlides(slideIndex);
 
-    if (slides.length < 10) {
-        total.textContent = `0${slides.length}`;
-    } else {
-        total.textContent = slides.length;
-    }
+    // if (slides.length < 10) {
+    //     total.textContent = `0${slides.length}`;
+    // } else {
+    //     total.textContent = slides.length;
+    // }
 
-    function showSlides(n) {
-        if (n > slides.length) {
-            slideIndex = 1;
-        }
-        if (n < 1) {
-            slideIndex = slides.length;
-        }
+    // function showSlides(n) {
+    //     if (n > slides.length) {
+    //         slideIndex = 1;
+    //     }
+    //     if (n < 1) {
+    //         slideIndex = slides.length;
+    //     }
 
-        slides.forEach((item) => item.style.display = 'none');
+    //     slides.forEach((item) => item.style.display = 'none');
 
-        slides[slideIndex - 1].style.display = 'block';
+    //     slides[slideIndex - 1].style.display = 'block';
 
-        if (slides.length < 10) {
-            current.textContent = `0${slideIndex}`;
-        } else {
-            current.textContent = slideIndex;
-        }
-    }
+    //     if (slides.length < 10) {
+    //         current.textContent = `0${slideIndex}`;
+    //     } else {
+    //         current.textContent = slideIndex;
+    //     }
+    // }
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
+    // function plusSlides(n) {
+    //     showSlides(slideIndex += n);
+    // }
 
-    prev.addEventListener('click', function () {
-        plusSlides(-1);
-    });
+    // prev.addEventListener('click', function () {
+    //     plusSlides(-1);
+    // });
 
-    next.addEventListener('click', function () {
-        plusSlides(1);
-    });
+    // next.addEventListener('click', function () {
+    //     plusSlides(1);
+    // });
 
-    let slideIndexCo = 1;
-    const slidesCo = document.querySelectorAll('.cookies_card'),
-        prevCo = document.querySelector('.offer__slider-prevCo'),
-        nextCo = document.querySelector('.offer__slider-nextCo'),
-        totalCo = document.querySelector('#totalCo'),
-        currentCo = document.querySelector('#currentCo');
+    // let slideIndexCo = 1;
+    // const slidesCo = document.querySelectorAll('.cookies_card'),
+    //     prevCo = document.querySelector('.offer__slider-prevCo'),
+    //     nextCo = document.querySelector('.offer__slider-nextCo'),
+    //     totalCo = document.querySelector('#totalCo'),
+    //     currentCo = document.querySelector('#currentCo');
 
-    showSlidesCo(slideIndexCo);
+    // showSlidesCo(slideIndexCo);
 
-    if (slidesCo.length < 10) {
-        totalCo.textContent = `0${slidesCo.length}`;
-    } else {
-        totalCo.textContent = slidesCo.length;
-    }
+    // if (slidesCo.length < 10) {
+    //     totalCo.textContent = `0${slidesCo.length}`;
+    // } else {
+    //     totalCo.textContent = slidesCo.length;
+    // }
 
-    function showSlidesCo(n) {
-        if (n > slidesCo.length) {
-            slideIndexCo = 1;
-        }
-        if (n < 1) {
-            slideIndexCo = slidesCo.length;
-        }
+    // function showSlidesCo(n) {
+    //     if (n > slidesCo.length) {
+    //         slideIndexCo = 1;
+    //     }
+    //     if (n < 1) {
+    //         slideIndexCo = slidesCo.length;
+    //     }
 
-        slidesCo.forEach((item) => item.style.display = 'none');
+    //     slidesCo.forEach((item) => item.style.display = 'none');
 
-        slidesCo[slideIndexCo - 1].style.display = 'block';
+    //     slidesCo[slideIndexCo - 1].style.display = 'block';
 
-        if (slidesCo.length < 10) {
-            currentCo.textContent = `0${slideIndexCo}`;
-        } else {
-            currentCo.textContent = slideIndexCo;
-        }
-    }
+    //     if (slidesCo.length < 10) {
+    //         currentCo.textContent = `0${slideIndexCo}`;
+    //     } else {
+    //         currentCo.textContent = slideIndexCo;
+    //     }
+    // }
 
-    function plusSlidesCo(n) {
-        showSlidesCo(slideIndexCo += n);
-    }
+    // function plusSlidesCo(n) {
+    //     showSlidesCo(slideIndexCo += n);
+    // }
 
-    prevCo.addEventListener('click', function () {
-        plusSlidesCo(-1);
-    });
+    // prevCo.addEventListener('click', function () {
+    //     plusSlidesCo(-1);
+    // });
 
-    nextCo.addEventListener('click', function () {
-        plusSlidesCo(1);
-    });
+    // nextCo.addEventListener('click', function () {
+    //     plusSlidesCo(1);
+    // });
 
-    let slideIndexCu = 1;
-    const slidesCu = document.querySelectorAll('.cupcakes_card'),
-        prevCu = document.querySelector('.offer__slider-prevCu'),
-        nextCu = document.querySelector('.offer__slider-nextCu'),
-        totalCu = document.querySelector('#totalCu'),
-        currentCu = document.querySelector('#currentCu');
+    // let slideIndexCu = 1;
+    // const slidesCu = document.querySelectorAll('.cupcakes_card'),
+    //     prevCu = document.querySelector('.offer__slider-prevCu'),
+    //     nextCu = document.querySelector('.offer__slider-nextCu'),
+    //     totalCu = document.querySelector('#totalCu'),
+    //     currentCu = document.querySelector('#currentCu');
 
-    showSlidesCu(slideIndexCu);
+    // showSlidesCu(slideIndexCu);
 
-    if (slidesCu.length < 10) {
-        totalCu.textCuntent = `0${slidesCu.length}`;
-    } else {
-        totalCu.textCuntent = slidesCu.length;
-    }
+    // if (slidesCu.length < 10) {
+    //     totalCu.textCuntent = `0${slidesCu.length}`;
+    // } else {
+    //     totalCu.textCuntent = slidesCu.length;
+    // }
 
-    function showSlidesCu(n) {
-        if (n > slidesCu.length) {
-            slideIndexCu = 1;
-        }
-        if (n < 1) {
-            slideIndexCu = slidesCu.length;
-        }
+    // function showSlidesCu(n) {
+    //     if (n > slidesCu.length) {
+    //         slideIndexCu = 1;
+    //     }
+    //     if (n < 1) {
+    //         slideIndexCu = slidesCu.length;
+    //     }
 
-        slidesCu.forEach((item) => item.style.display = 'none');
+    //     slidesCu.forEach((item) => item.style.display = 'none');
 
-        slidesCu[slideIndexCu - 1].style.display = 'block';
+    //     slidesCu[slideIndexCu - 1].style.display = 'block';
 
-        if (slidesCu.length < 10) {
-            currentCu.textCuntent = `0${slideIndexCu}`;
-        } else {
-            currentCu.textCuntent = slideIndexCu;
-        }
-    }
+    //     if (slidesCu.length < 10) {
+    //         currentCu.textCuntent = `0${slideIndexCu}`;
+    //     } else {
+    //         currentCu.textCuntent = slideIndexCu;
+    //     }
+    // }
 
-    function plusSlidesCu(n) {
-        showSlidesCu(slideIndexCu += n);
-    }
+    // function plusSlidesCu(n) {
+    //     showSlidesCu(slideIndexCu += n);
+    // }
 
-    prevCu.addEventListener('click', function () {
-        plusSlidesCu(-1);
-    });
+    // prevCu.addEventListener('click', function () {
+    //     plusSlidesCu(-1);
+    // });
 
-    nextCu.addEventListener('click', function () {
-        plusSlidesCu(1);
-    });
+    // nextCu.addEventListener('click', function () {
+    //     plusSlidesCu(1);
+    // });
 
 
-});
