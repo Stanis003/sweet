@@ -82,7 +82,10 @@ class Cart {
     this.updateBadge();
   }
   async updateBadge() {
-    const {count, cost } = await this.cartLengthAndCost(); 
+    const {
+      count,
+      cost
+    } = await this.cartLengthAndCost();
     document.querySelector('#cart-badge').innerText = `${count} $${cost}`;
   }
   async cartLengthAndCost() {
@@ -91,34 +94,35 @@ class Cart {
     let cost = 0;
     // const productService = new ProductsService();
     for (const key in this.cart) {
-        const product = await this.productService.getProductById(key);
-        const quantity = this.cart[key]; 
-        count += quantity;
-        cost += quantity * product.price;
+      const product = await this.productService.getProductById(key);
+      const quantity = this.cart[key];
+      count += quantity;
+      cost += quantity * product.price;
     }
     return {
-        count, cost
+      count,
+      cost
     };
   }
   order(ev) {
     if (this.cartLengthAndCost().count === 0) {
       window.showAlert('Please choose products to order', false);
       return;
-    }    
+    }
     const form = this.cartContainer.querySelector('.form-contacts');
     if (form.checkValidity()) {
       ev.preventDefault();
       fetch('order', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          clientName: document.querySelector('#client-name').value,
-          clientEmail: document.querySelector('#client-email').value,
-          cart: this.cart
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            clientName: document.querySelector('#client-name').value,
+            clientEmail: document.querySelector('#client-email').value,
+            cart: this.cart
+          })
         })
-      })
         .then(response => {
           if (response.status === 200) {
             return response.text();

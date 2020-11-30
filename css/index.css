@@ -76,7 +76,7 @@ header nav .menu-items a {
 }
 @media(min-width:540px){
 
-    .wedding_cake, .history
+    .wedding_cake, .history,
     #order {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -346,3 +346,9 @@ img,
     display: flex;
     align-items:d
 }
+#map {
+    height: 400px;
+
+    width: 100%;
+    
+  }
