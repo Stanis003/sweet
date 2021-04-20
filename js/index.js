@@ -1,7 +1,7 @@
 new ProductList(new Cart());
 
 //Timer
-const deadline = '2020-12-15';
+const deadline = '2021-04-26';
 
 function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date()),
